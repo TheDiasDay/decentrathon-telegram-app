@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const navItems = [
     {
-      name: 'Главная',
+      name: 'Home',
       path: '/main',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -15,7 +15,7 @@ const Navbar = () => {
       ),
     },
     {
-      name: 'Хакатоны',
+      name: 'Hackathons',
       path: '/hackathons',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ const Navbar = () => {
       ),
     },
     {
-      name: 'Рейтинг',
+      name: 'Rating',
       path: '/rating',
       soon: true,
       icon: (
@@ -34,7 +34,7 @@ const Navbar = () => {
       ),
     },
     {
-      name: 'Магазин',
+      name: 'Shop',
       path: '/shop',
       soon: true,
       icon: (
@@ -44,7 +44,7 @@ const Navbar = () => {
       ),
     },
     {
-      name: 'Профиль',
+      name: 'Profile',
       path: '/profile',
       soon: true,
       icon: (
@@ -56,22 +56,39 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg">
       <div className="grid grid-cols-5">
         {navItems.map((item) => (
           <Link
             key={item.name}
             to={item.soon ? '#' : item.path}
-            className={`flex flex-col items-center justify-center p-2 text-sm ${
+            className={`flex flex-col items-center justify-center p-2 text-sm transition-all duration-200 ease-in-out transform hover:scale-110 ${
               location.pathname === item.path
-                ? 'text-primary'
-                : 'text-gray-500'
+                ? 'text-blue-600'
+                : 'text-gray-500 hover:text-blue-500'
             }`}
+            onClick={(e) => {
+              if (item.soon) {
+                e.preventDefault();
+                const telegram = window.Telegram.WebApp;
+                telegram.showPopup({
+                  title: 'Coming Soon!',
+                  message: `${item.name} feature will be available soon. Stay tuned!`,
+                  buttons: [{ type: 'close' }]
+                });
+              }
+            }}
           >
-            {item.icon}
-            <span className="mt-1">{item.name}</span>
+            <div className={`p-2 rounded-full ${
+              location.pathname === item.path
+                ? 'bg-blue-100'
+                : 'hover:bg-gray-100'
+            }`}>
+              {item.icon}
+            </div>
+            <span className="mt-1 font-medium">{item.name}</span>
             {item.soon && (
-              <span className="absolute top-1 right-1 bg-primary text-white text-xs px-1 rounded">
+              <span className="absolute top-1 right-1 bg-blue-500 text-white text-xs px-1 rounded-full animate-pulse">
                 SOON
               </span>
             )}
