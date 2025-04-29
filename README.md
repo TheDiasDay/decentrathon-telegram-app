@@ -1,138 +1,138 @@
-        # 🚀 Decentrathon - Telegram Mini App
+# Decentrathon - Telegram Mini App
 
-        <div align="center">
-        <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-        <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-        <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-        <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
-        </div>
+<div align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
+</div>
 
-        ## 📝 Overview
+## Overview
 
-        Decentrathon is a Telegram Mini App designed to revolutionize the hackathon experience. It provides a seamless platform for users to discover, participate in, and manage hackathons directly through Telegram.
+Decentrathon is a Telegram Mini App designed to revolutionize the hackathon experience. It provides a seamless platform for users to discover, participate in, and manage hackathons directly through Telegram.
 
-        ### 🌟 Key Features
+### Key Features
 
-        - **User Onboarding**: Smooth multi-step onboarding process
-        - **Hackathon Discovery**: Browse and filter hackathons based on preferences
-        - **Real-time Updates**: Get instant notifications about hackathon events
-        - **Profile Management**: Customize your profile and preferences
-        - **Responsive Design**: Beautiful UI with TailwindCSS
-        - **Telegram Integration**: Seamless experience within Telegram
+- **User Onboarding**: Smooth multi-step onboarding process
+- **Hackathon Discovery**: Browse and filter hackathons based on preferences
+- **Real-time Updates**: Get instant notifications about hackathon events
+- **Profile Management**: Customize your profile and preferences
+- **Responsive Design**: Beautiful UI with TailwindCSS
+- **Telegram Integration**: Seamless experience within Telegram
 
-        ## 🏗️ Project Structure
+## Project Structure
 
-        ```
-        decentrathon/
-        ├── client/                 # Frontend React application
-        │   ├── src/
-        │   │   ├── components/    # Reusable React components
-        │   │   ├── pages/        # Page components
-        │   │   └── utils/        # Utility functions
-        │   └── public/           # Static files
-        └── server/               # Backend Node.js application
-            ├── routes/          # API routes
-            ├── models/          # MongoDB models
-            └── config/         # Configuration files
-        ```
+```
+decentrathon/
+├── client/                 # Frontend React application
+│   ├── src/
+│   │   ├── components/    # Reusable React components
+│   │   ├── pages/        # Page components
+│   │   └── utils/        # Utility functions
+│   └── public/           # Static files
+└── server/               # Backend Node.js application
+    ├── routes/          # API routes
+    ├── models/          # MongoDB models
+    └── config/         # Configuration files
+```
 
-        ## 🚀 Getting Started
+## Getting Started
 
-        ### Prerequisites
+### Prerequisites
 
-        - Node.js (v14 or higher)
-        - npm or yarn
-        - MongoDB Atlas account or local MongoDB installation
-        - Telegram Bot Token (get from [@BotFather](https://t.me/BotFather))
+- Node.js (v14 or higher)
+- npm or yarn
+- MongoDB Atlas account or local MongoDB installation
+- Telegram Bot Token (get from [@BotFather](https://t.me/BotFather))
 
-        ### Installation
+### Installation
 
-        1. **Clone the repository**
-        ```bash
-        git clone https://github.com/TheDiasDay/decentrathon-telegram-app.git
-        cd decentrathon-telegram-app
-        ```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/TheDiasDay/decentrathon-telegram-app.git
+   cd decentrathon-telegram-app
+   ```
 
-        2. **Backend Setup**
-        ```bash
-        cd server
-        npm install
-        ```
-        
-        Create a `.env` file:
-        ```
-            MONGODB_URI=mongodb://localhost:27017/DECENTRATHON
-            BOT_TOKEN=8037012958:AAGkJqs4gyVdIf8LYSu64CQhonWADSCr-SI
-            PORT=5001
-            WEBAPP_URL=https://salty-mails-beg.loca.lt
-        ```
+2. **Backend Setup**
+   ```bash
+   cd server
+   npm install
+   ```
+   
+   Create a `.env` file:
+   ```
+   MONGODB_URI=mongodb://localhost:27017/DECENTRATHON
+   BOT_TOKEN=8037012958:AAGkJqs4gyVdIf8LYSu64CQhonWADSCr-SI
+   PORT=5001
+   WEBAPP_URL=https://salty-mails-beg.loca.lt
+   ```
 
-        3. **Frontend Setup**
-        ```bash
-        cd client
-        npm install
-        ```
-        
-        Create a `.env` file:
-        ```
-        REACT_APP_API_URL=http://localhost:5001
-        ```
+3. **Frontend Setup**
+   ```bash
+   cd client
+   npm install
+   ```
+   
+   Create a `.env` file:
+   ```
+   REACT_APP_API_URL=http://localhost:5001
+   ```
 
-        ### Running the Application
+### Running the Application
 
-        1. **Start the backend server**
-        ```bash
-        cd server
-        npm start
-        ```
+1. **Start the backend server**
+   ```bash
+   cd server
+   npm start
+   ```
 
-        2. **Start the frontend development server**
-        ```bash
-        cd client
-        npm start
-        ```
+2. **Start the frontend development server**
+   ```bash
+   cd client
+   npm start
+   ```
 
-        3. **Access the application**
-        - Open your Telegram bot
-        - Send `/start` command
-        - Click "Открыть приложение" button
+3. **Access the application**
+   - Open your Telegram bot
+   - Send `/start` command
+   - Click "Открыть приложение" button
 
-        ## 🛠️ Technologies Used
+## Technologies Used
 
-        - **Frontend**:
-        - React.js
-        - TailwindCSS
-        - Axios
-        - React Router
+- **Frontend**:
+  - React.js
+  - TailwindCSS
+  - Axios
+  - React Router
 
-        - **Backend**:
-        - Node.js
-        - Express.js
-        - MongoDB
-        - Mongoose
-        - node-telegram-bot-api
+- **Backend**:
+  - Node.js
+  - Express.js
+  - MongoDB
+  - Mongoose
+  - node-telegram-bot-api
 
-        ## 🤝 Contributing
+## Contributing
 
-        Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-        1. Fork the repository
-        2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-        3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-        4. Push to the branch (`git push origin feature/AmazingFeature`)
-        5. Open a Pull Request
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-        ## 📝 License
+## License
 
-        This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-        ## 👥 Team
+## Team
 
-        - [@TheDiasDay](https://github.com/TheDiasDay) - Lead Developer
+- [@TheDiasDay](https://github.com/TheDiasDay) - Lead Developer
 
-        ## 🙏 Acknowledgments
+## Acknowledgments
 
-        - [Telegram Bot API](https://core.telegram.org/bots/api)
-        - [React.js](https://reactjs.org/)
-        - [Node.js](https://nodejs.org/)
-        - [MongoDB](https://www.mongodb.com/) 
+- [Telegram Bot API](https://core.telegram.org/bots/api)
+- [React.js](https://reactjs.org/)
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/) 
