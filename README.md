@@ -28,13 +28,11 @@ decentrathon/
 │   ├── src/
 │   │   ├── components/    # Reusable React components
 │   │   ├── pages/        # Page components
-│   │   ├── context/      # React context for state management
 │   │   └── utils/        # Utility functions
 │   └── public/           # Static files
 └── server/               # Backend Node.js application
     ├── routes/          # API routes
     ├── models/          # MongoDB models
-    ├── controllers/     # Route controllers
     └── config/         # Configuration files
 ```
 
@@ -63,9 +61,10 @@ decentrathon/
    
    Create a `.env` file:
    ```
-   MONGODB_URI=your_mongodb_uri
+   MONGODB_URI=mongodb://localhost:27017/decentrathon
    BOT_TOKEN=your_telegram_bot_token
-   PORT=5000
+   PORT=5001
+   WEBAPP_URL=your_ngrok_url
    ```
 
 3. **Frontend Setup**
@@ -76,8 +75,7 @@ decentrathon/
    
    Create a `.env` file:
    ```
-   REACT_APP_API_URL=http://localhost:5000
-   REACT_APP_BOT_USERNAME=your_bot_username
+   REACT_APP_API_URL=http://localhost:5001
    ```
 
 ### Running the Application
@@ -96,8 +94,8 @@ decentrathon/
 
 3. **Access the application**
    - Open your Telegram bot
-   - Click on the menu button
-   - Select "Start App"
+   - Send `/start` command
+   - Click "Открыть приложение" button
 
 ## 🛠️ Technologies Used
 
@@ -112,10 +110,7 @@ decentrathon/
   - Express.js
   - MongoDB
   - Mongoose
-
-- **DevOps**:
-  - GitHub Actions
-  - Docker (coming soon)
+  - node-telegram-bot-api
 
 ## 🤝 Contributing
 
